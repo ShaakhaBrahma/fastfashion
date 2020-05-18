@@ -7,6 +7,7 @@ import numpy as np
 from PIL import Image
 from io import BytesIO
 import constants
+from color import get_color_name
 
 
 
@@ -20,7 +21,7 @@ def check_health():
     return {"message": "Fashion server is up"}
 
 
-@app.post("/files/")
+'''@app.post("/files/")
 async def create_file(file: bytes = File(...)):
     stream = BytesIO(file)
     color_image = Image.open(stream)
@@ -34,7 +35,7 @@ async def create_file(file: bytes = File(...)):
         if _[0] > intended_color_count:
             intended_color_count = _[0]
             intended_color = _[1]
-    return {"file_size": len(file),"color":intended_color, "color_count":intended_color_count}
+    return {"file_size": len(file),"color":intended_color, "color_count":intended_color_count}'''
 
 
 @app.post("/uploadfile/")
@@ -64,9 +65,9 @@ async def predict(file: bytes = File(...)):
         if _[0] > intended_color_count:
             intended_color_count = _[0]
             intended_color = _[1]
-
+    color_name= get_color_name(list(intended_color))
     label = constants.labelNames[np.argmax(probs)]
-    return {"label": label, "color":intended_color, "color_count":intended_color_count}
+    return {"label": label, "color":color_name, "color_count":intended_color_count}
 
 
 def run_server(model_path, host, port):
@@ -80,4 +81,4 @@ def run_server(model_path, host, port):
 
 
 if __name__ == '__main__':
-    run_server("./fmnist.h5", "192.168.43.73", 9000)
+    run_server("./fmnist.h5", "127.0.0.1", 8000)
