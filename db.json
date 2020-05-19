@@ -1,0 +1,37 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "fullname": "sri",
+      "birthdate": "28-11-1998",
+      "email": "vatsa@gmail.com",
+      "passwd": "qwerty@123",
+      "fav_color": "black"
+    },
+    {
+      "id": 2,
+      "fullname": "satya",
+      "birthdate": "01-02-1998",
+      "email": "satya@gmail.com",
+      "passwd": "abcd@123",
+      "fav_color": "brown"
+    }
+  ],
+  "Cupboard": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "f_name": "sri"
+    }
+  ],
+  "Dress": [
+    {
+      "id": 1,
+      "cupboard_id": 1,
+      "image": "/home/shaakhabrahma/Downloads/FastFashion/Images/1/5.jpeg",
+      "type_id": "",
+      "type_name": "",
+      "color": ""
+    }
+  ]
+}
