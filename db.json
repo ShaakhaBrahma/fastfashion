@@ -17,21 +17,33 @@
       "fav_color": "brown"
     }
   ],
-  "Cupboard": [
-    {
-      "id": 1,
-      "user_id": 1,
-      "f_name": "sri"
-    }
-  ],
   "Dress": [
     {
+
       "id": 1,
-      "cupboard_id": 1,
-      "image": "/home/shaakhabrahma/Downloads/FastFashion/Images/1/5.jpeg",
-      "type_id": "",
-      "type_name": "",
-      "color": ""
+      "user_id": 1,
+      "image": "Images/1/5.jpeg",
+      "type_name": "top",
+      "color": "Red"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "image": "Images/1/5.jpeg",
+      "type_name": "trouser",
+      "color": "Brown"
     }
-  ]
+  ],
+  "Wornhis":
+          [
+            {
+              "user_id": 1,
+              "date": "21-05-2020",
+              "image_1": 1,
+              "image_2": 2
+
+            }
+          ]
+
+
 }
